@@ -11,6 +11,7 @@ import RequireAuth from './components/Login/RequireAuth/RequireAuth';
 import NotFound from './components/NotFound/NotFound';
 
 import Header from './components/Shared/Header/Header';
+import Footer from './components/Shared/Footer/Footer';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         </Route>
       <Route path='*' element={<NotFound></NotFound>}> </Route>
     </Routes>
-   
+   <Footer></Footer>
     </div>
   );
 }

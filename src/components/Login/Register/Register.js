@@ -2,41 +2,46 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 
 const Register = () => {
+
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+     const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
+       
+      let errorElement;
+      if (error) {
+          errorElement = <p className='text-danger'>Error: {error?.message}</p>
+      }
+
+      if(loading || updating){
+        return <h1>Loading</h1>
+    }
+
 
     const navigate = useNavigate();
 
-    const [sendEmailVerification, sending, VerificationError] = useSendEmailVerification(auth);
-    const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
-
     const navigateToLogin = () =>{
-        navigate('/login')
+        navigate('/login');
     }
 
-if(user){
-    navigate('/home')
-}
 
     const handleFormSubmit = e => {
         e.preventDefault();
         const username = e.target.username.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        
-
         createUserWithEmailAndPassword(email,password);
-        updateProfile({username});
-        sendEmailVerification();
-
+        toast('generating account');
+        updateProfile({username});   
         console.log(user);
+        navigate('/home');
         
     }
     return (
@@ -74,11 +79,13 @@ if(user){
     <Form.Group className="mb-3" controlId="formBasicCheckbox">
     <Form.Check type="checkbox" label="Check me out" />
     </Form.Group>
+    {errorElement}
     <Button variant="primary" type="submit">
     Register
     </Button>
     </Form>
     <p className='fw-bold text-center mt-3 fs-4'>Already have an account? <span className='text-danger' role="button" onClick={navigateToLogin}>Please Log In!</span></p>
+    <ToastContainer></ToastContainer>
         </div>
     );
 };
