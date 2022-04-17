@@ -1,5 +1,34 @@
-.sliderimg{
-    width: 100%;
-    height: 500px;
-    object-fit: cover
-  }
+
+.carousel-container{
+  
+  margin-top: 100px;
+}
+.carousel-item{
+ border-radius: 10px;
+  background-color: #064C37;
+}
+.carousel-item img{
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.banner-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.banner-info h2{
+  color: #fff;
+  font-size: 36px;
+}
+.banner-info p{
+  font-size: 28px;
+  padding-right: 50px;
+  color: #fff;
+}
+
+.carousel-indicators li { 
+  display: none;
+ }
