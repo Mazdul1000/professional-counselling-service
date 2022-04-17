@@ -32,3 +32,22 @@
 .carousel-indicators li { 
   display: none;
  }
+
+ @media screen and (max-width:992px) {
+   .banner-info h2{
+     font-size: 22px;
+     
+   }
+   .banner-info p{
+     font-size: 17px;
+   }
+ }
+ @media screen and (max-width:544px) {
+   .banner-info h2{
+     font-size: 17px;
+     
+   }
+   .banner-info p{
+     font-size: 14px;
+   }
+ }

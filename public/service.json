@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Interpersonal Therapy (IPT)",
+        "price": "699",
+        "session":"4 session",
+        "description": "Interpersonal therapy is a form of psychotherapy that focuses on your relationships with other people. It's based on the idea that personal relationships are often at the center of psychological problems.",
+        "img": "https://i.ibb.co/3CphS45/service1.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Marrige or Relationship Counselling",
+        "price": "800",
+        "session":"4 session",
+        "description": "Relationship counselling can help improve the way you relate to those around you and allow you to break free from old patterns of behaviour. I will provide a supportive and non-judgmental environment to help you identify issues or problems in a relationship and find a way through those difficulties.",
+        "img": "https://i.ibb.co/3CphS45/service1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Family Dispute Resolution",
+        "price": "1099",
+        "session":"3 session",
+        "description": "Disputes may include conflicts over parenting and the care of children, child support, financial arrangements and how to divide their property. My dispute resolution services provide a focus on safety, ensure the best interests of children, and that both people can participate.",
+        "img": "https://i.ibb.co/3CphS45/service1.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Child Counselling",
+        "price": "499",
+        "session":"6 session",
+        "description": "Child counseling is a type of therapy that focuses on young children, teens, and adolescents with one or more mental illnesses. I also provides aid to youths, who have experienced trauma, and/or who are experiencing a dysfunctional or stressful home environment.",
+        "img": "https://i.ibb.co/3CphS45/service1.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Cognitive Behavioral Therapy (CBT)",
+        "price": "1500",
+        "session":"5 session",
+        "description": "Cognitive-behavioral therapy (CBT) involves techniques that you can practice every day to help change unhealthy thinking to healthy thinking. Unhealthy thinking can take many forms, such as focusing on negative thoughts. I can teach you to watch for negative thinking and suggest ways to overcome it through a variety of proven techniques.",
+        "img": "https://i.ibb.co/3CphS45/service1.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Group Psychotherapy",
+        "price": "2099",
+        "session":"2 session",
+        "description": "Group therapy may be conducted for a limited number of sessions or can be ongoing. A group's design, therapeutic approach and duration are influenced by the focus of the group and the therapist's treatment style.",
+        "img": "https://i.ibb.co/3CphS45/service1.jpg"
+    }
+]
