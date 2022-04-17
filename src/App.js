@@ -11,7 +11,6 @@ function App() {
     <Header></Header>
     <h1 className='text-primary'>Hello from Mazdul</h1>
     <Routes>
-
     </Routes>
    
     </div>
