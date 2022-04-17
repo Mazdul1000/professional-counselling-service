@@ -1,0 +1,16 @@
+#nav-bar{
+    color: #000;
+    background-color: #fff;    
+    box-shadow: 0 8px 6px -6px #618D2B;
+}
+
+.navigation{
+    color: #000;
+}
+
+#brand-name{
+    font-size: 36px;
+    font-weight: 700;
+    color: #618D2B;
+    font-family: 'Oswald', sans-serif;
+}

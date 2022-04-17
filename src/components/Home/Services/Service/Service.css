@@ -4,7 +4,11 @@
 }
 
 .card-img{
-border-radius: 5px;
+border-radius: 15px;
+}
+
+.service,.service-container,.img-overlay{
+    border-radius: 15px;
 }
 
 .service-title{

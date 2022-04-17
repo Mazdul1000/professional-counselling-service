@@ -1,0 +1,67 @@
+.feature-btn{
+    background-color: #064C37;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+
+}
+
+
+.feature-btn:hover{
+    background-color: #03291e;
+  
+  }
+  .feature-btn:active{
+   transform: scale(0.96);
+  
+  }
+
+/* Right side features */
+
+
+.right-features{
+    background-color: #618D2B;
+    border-radius: 15px;
+}
+
+.right-feature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-arrow{
+    height: 30px;
+    width: 30px;
+}
+
+/* Left side features */
+
+.left-feature h2{
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.left-feature p{
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.divider{
+    height: 2px;
+    background-color:#618D2B ;
+    width: 70%;
+}
+
+
+/* responsive */
+
+@media only screen and (max-width:992px) {
+    .left-feature{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
