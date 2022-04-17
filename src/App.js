@@ -1,31 +1,19 @@
-<<<<<<< HEAD
 
-=======
-import logo from './logo.svg';
->>>>>>> c795955 (modify)
+import { Route,Routes } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home/Home/Home';
+import Login from './components/Login/Login/Login';
+import Header from './components/Shared/Header/Header';
 
 function App() {
   return (
     <div className="App">
-<<<<<<< HEAD
-  
-=======
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
->>>>>>> c795955 (modify)
+    <Header></Header>
+    
+    <Routes>
+      <Route path='/' element={<Home></Home>}></Route>
+      <Route path='login' element={<Login></Login>}></Route>
+    </Routes>
     </div>
   );
 }
