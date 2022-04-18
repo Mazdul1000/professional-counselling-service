@@ -1,0 +1,36 @@
+#form{
+border: none!important;
+}
+
+.user-input{
+   height: 55px;
+   width: 75%;
+   margin: 0 auto;   
+   margin-top: 20px;
+   outline: none;
+   border-left: 5px solid #618D2B;
+   box-shadow:5px 8px 6px -6px #618D2B; 
+   border-radius: 10px;
+
+}
+
+.user-input:focus{
+    outline: none;
+    border: none;
+}
+
+.submit-btn{
+    margin: 0 auto;
+    background-color: #618D2B;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: 20px;
+
+}
+
+.login-title{
+    color: #618D2B;
+    font-family: 'Oswald', sans-serif;
+    margin: 40px 0;
+}

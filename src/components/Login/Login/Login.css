@@ -1,3 +1,36 @@
 .login{
-    height: 80vh;
+    height: 90vh;
 }
+
+.google-login-btn{
+    background-color: #618D2B;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+
+.google-login-btn:active{
+ transform: scale(0.98);
+ border: none;
+  
+  }
+
+  .divider-text{
+      color: #618D2B;
+  }
+
+  .pass-reset{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #618D2B;
+  }
+
+  .toggle-btn{
+    font-family: 'Oswald', sans-serif;
+     
+  }
+
+
+  
