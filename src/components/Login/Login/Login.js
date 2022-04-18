@@ -39,7 +39,7 @@ const Login = () => {
 
   let errorElement;
   if (error) {
-    errorElement = <p className='text-danger text-center' style={{fontSize:"18px",fontWeight:"bold"}}>Error: {error?.message}</p>
+    errorElement = <p className='text-danger text-center' style={{ fontSize: "18px", fontWeight: "bold" }}>Error: {error?.message}</p>
   }
 
 
@@ -49,6 +49,8 @@ const Login = () => {
     const password = passwordRef.current.value;
     signInWithEmailAndPassword(email, password)
   }
+
+
   const navigateToRegister = () => {
 
     navigate('/register');
@@ -72,10 +74,14 @@ const Login = () => {
 
       <Form id='form' onSubmit={handleFormSubmit} className='w-50 mx-auto mt-5 border p-4 rounded'>
         <h1 className='login-title fw-bold text-center mt-3'>Please Log In</h1>
+
+        {/* Google login Section */}
+
         <SocialLogin></SocialLogin>
+        {/* ************** */}
+
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-
           <Form.Control ref={emailRef} className='user-input' type="email" placeholder="Enter email" required />
 
         </Form.Group>
@@ -92,7 +98,7 @@ const Login = () => {
         <p className='text-center mb-0 pass-reset d-flex justify-content-center align-items-center'><span> Forget Password?</span><button className='btn btn-link text-danger  text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
       </Form>
 
-      <p className='toggle-btn fw-bold text-center fs-4'>New to <span>Lotus</span> ? <span style={{color:"#064C37"}} role="button" onClick={navigateToRegister}>Please register!</span></p>
+      <p className='toggle-btn fw-bold text-center fs-4'>New to <span>Lotus</span> ? <span style={{ color: "#064C37" }} role="button" onClick={navigateToRegister}>Please register!</span></p>
 
       <ToastContainer />
     </div>
