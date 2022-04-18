@@ -1,0 +1,11 @@
+.check-out{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    color: #064C37;
+    font-family: "Oswald";
+}
+

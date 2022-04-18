@@ -12,6 +12,7 @@ import NotFound from './components/NotFound/NotFound';
 
 import Header from './components/Shared/Header/Header';
 import Footer from './components/Shared/Footer/Footer';
+import Loading from './components/Loading/Loading';
 
 function App() {
   return (

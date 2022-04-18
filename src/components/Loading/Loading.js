@@ -1,15 +1,14 @@
 import React from 'react';
 import { Spinner } from 'react-bootstrap';
-import './CheckOut.css'
+import './Loading.css'
 
-const CheckOut = () => {
+const Loading = () => {
     return (
-        <div className='check-out'>
-           <div>
-             <h1>CheckOut Section</h1>
-         </div>
-         <div> 
-         <h2 className='loading-text'>Going to the payment section</h2>
+        <div className='loading-container'>
+
+   
+            <div>
+                <h2 className='loading-text'>Loading...</h2>
             </div>
             <div>
                 <Spinner className='spinner' animation="grow"/>
@@ -17,8 +16,12 @@ const CheckOut = () => {
                 <Spinner className='spinner' animation="grow"/>
                 <Spinner className='spinner' animation="grow"/>
             </div>
+
+
+
+
         </div>
     );
 };
 
-export default CheckOut;
+export default Loading;

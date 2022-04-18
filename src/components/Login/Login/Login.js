@@ -8,6 +8,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import SocialLogin from '../SocialLogin/SocialLogin';
+import Loading from '../../Loading/Loading';
 
 
 const Login = () => {
@@ -29,7 +30,7 @@ const Login = () => {
   const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
   if (loading || sending) {
-    return <h1>Loading</h1>
+    return <Loading></Loading>
   }
 
   if (user) {
@@ -38,7 +39,7 @@ const Login = () => {
 
   let errorElement;
   if (error) {
-    errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    errorElement = <p className='text-danger text-center' style={{fontSize:"18px",fontWeight:"bold"}}>Error: {error?.message}</p>
   }
 
 
@@ -91,7 +92,7 @@ const Login = () => {
         <p className='text-center mb-0 pass-reset d-flex justify-content-center align-items-center'><span> Forget Password?</span><button className='btn btn-link text-danger  text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
       </Form>
 
-      <p className='toggle-btn fw-bold text-center fs-4'>New to <span>Lotus</span> ? <span className='text-danger' role="button" onClick={navigateToRegister}>Please register!</span></p>
+      <p className='toggle-btn fw-bold text-center fs-4'>New to <span>Lotus</span> ? <span style={{color:"#064C37"}} role="button" onClick={navigateToRegister}>Please register!</span></p>
 
       <ToastContainer />
     </div>

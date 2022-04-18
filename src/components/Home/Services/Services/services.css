@@ -1,7 +1,11 @@
 .services-title{
-    color: #064C37;
     text-align: center;
-    font-size: 42px;
-    font-weight: bolder;
+    font-family: 'Oswald', sans-serif;
+    border-bottom:3px solid #618D2B;
+    width: 30%;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    color: #212529;
+    
 
 }

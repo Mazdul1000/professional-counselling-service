@@ -8,8 +8,12 @@ import {ArrowLeftIcon,ArrowRightIcon} from '@heroicons/react/solid'
 const Features = () => {
     return (
         <div>
+            
+            <h1 className='feature-title' >Features</h1>
+            
+            
             <div className="row mx-2">
-
+            
                 {/* Left Side Features */}
                 <div className="left-features d-flex flex-column justify-content-center col-md-12 col-lg-6  gap-5">
                     <div className="left-feature">

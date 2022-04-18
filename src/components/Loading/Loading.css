@@ -1,0 +1,17 @@
+.loading-container{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.loading-text{
+    color: #064C37;
+    font-family: monospace,sans-serif;
+    font-weight: bolder;
+}
+.spinner{
+    color: #064C37;
+}

@@ -1,0 +1,16 @@
+.not-verified{
+    color: #064C37;
+    font-family: "Oswald",sans-serif;
+    height: 40vh;
+}
+
+.sent-btn{
+    background-color: #064C37;
+    color: aliceblue;
+}
+
+.sent-btn:hover{
+    color: #064C37;
+    background-color: aliceblue;
+    border: 1px solid #064C37;
+}

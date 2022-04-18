@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
+import Loading from '../../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Register.css';
 
@@ -20,11 +21,11 @@ const Register = () => {
 
     let errorElement;
     if (error || UpdateError) {
-        errorElement = <p className='text-danger'>Error: {error?.message} {UpdateError?.message} </p>
+        errorElement = <p className='text-danger text-center' style={{fontSize:"18px",fontWeight:"bold"}}>Error: {error?.message} {UpdateError?.message}</p>
     }
 
     if (loading || updating) {
-        return <h1>Loading</h1>
+        return <Loading></Loading>
     }
 
     const navigateToLogin = () => {
@@ -80,15 +81,12 @@ const Register = () => {
 
                     <Form.Control className='user-input' name="password" type="password" placeholder="Password" required />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
                 {errorElement}
                 <Button className='submit-btn btn-success d-block' variant="primary" type="submit">
                     Register
                 </Button>
             </Form>
-            <p className='fw-bold text-center mt-3 fs-4'>Already have an account? <span className='text-danger' role="button" onClick={navigateToLogin}>Please Log In!</span></p>
+            <p className='fw-bold text-center mt-3 fs-4'>Already have an account? <span style={{color:"#064C37"}} role="button" onClick={navigateToLogin}>Please Log In!</span></p>
             <ToastContainer></ToastContainer>
         </div>
     );
