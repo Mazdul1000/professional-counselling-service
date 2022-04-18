@@ -1,0 +1,29 @@
+
+.about-title{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    border-bottom:3px solid #618D2B;
+    width: 30%;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    color: #212529;
+}
+
+.about-card{
+    box-shadow:5px 8px 6px -6px #618D2B;
+}
+
+.about-card img{
+    box-shadow:5px 8px 6px -6px #999;
+}
+.about-info h3{
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+.about-info p{
+   font-size: 18px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 400;
+}

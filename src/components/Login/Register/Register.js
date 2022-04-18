@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
@@ -16,23 +16,27 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     let errorElement;
-    if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    if (error||UpdateError||googleError) {
+        errorElement = <p className='text-danger'>Error: {error?.message} {UpdateError?.message} {googleError?.message} </p>
     }
 
-    if (loading || updating) {
+    if (loading || updating||googleLoading) {
         return <h1>Loading</h1>
     }
 
-
-
-
-    const navigateToLogin = () => {
+  const navigateToLogin = () => {
         navigate('/login');
     }
+  
+    if(user||googleUser){
+        navigate('/home');
+    }
 
+
+  
 
     const handleFormSubmit = e => {
         e.preventDefault();
@@ -42,7 +46,7 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
         toast('generating account');
         updateProfile({ username });
-        console.log(user);
+        
 
     }
     return (
@@ -51,10 +55,12 @@ const Register = () => {
 
 
         <div className='w-100'>
+               <h1 className='login-title fw-bold text-center mt-3'>Please Register</h1>
+                <Button onClick={() => signInWithGoogle()} className='google-login-btn btn-success text-center d-flex justify-content-center align-items-center'><span><img src={googleIcon} alt="" /></span><span>Continue With Google</span></Button>
+                <div className='d-flex align-items-center justify-content-center mt-3 gap-3'><div className="divider w-25"></div> <h4 className='divider-text'>OR</h4> <div className="divider w-25"></div> 
+                 </div>
             <Form onSubmit={handleFormSubmit} id='form' className=' w-50 mx-auto mt-5 border p-4 rounded'>
-                <h1 className='login-title fw-bold text-center mt-3'>Please Register</h1>
-                <Button className='google-login-btn btn-success text-center d-flex justify-content-center align-items-center'><span><img src={googleIcon} alt="" /></span><span>Continue With Google</span></Button>
-                <div className='d-flex align-items-center justify-content-center mt-3 gap-3'><div className="divider w-25"></div> <h4 className='divider-text'>OR</h4> <div className="divider w-25"></div>  </div>
+             
 
                 <Form.Group className="mb-3">
 
