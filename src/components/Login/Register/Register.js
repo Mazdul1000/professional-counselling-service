@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
@@ -19,7 +19,7 @@ const Register = () => {
     const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
 
     let errorElement;
-    if (error||UpdateError) {
+    if (error || UpdateError) {
         errorElement = <p className='text-danger'>Error: {error?.message} {UpdateError?.message} </p>
     }
 
@@ -27,16 +27,16 @@ const Register = () => {
         return <h1>Loading</h1>
     }
 
-  const navigateToLogin = () => {
+    const navigateToLogin = () => {
         navigate('/login');
     }
-  
-    if(user){
+
+    if (user) {
         navigate('/home');
     }
 
 
-  
+
 
     const handleFormSubmit = e => {
         e.preventDefault();
@@ -46,7 +46,7 @@ const Register = () => {
         createUserWithEmailAndPassword(email, password);
         toast('generating account');
         updateProfile({ username });
-        
+
 
     }
     return (
@@ -55,10 +55,11 @@ const Register = () => {
 
 
         <div className='w-100'>
-               <h1 className='login-title fw-bold text-center mt-3'>Please Register</h1>
-                
+
+
             <Form onSubmit={handleFormSubmit} id='form' className=' w-50 mx-auto mt-5 border p-4 rounded'>
-             <SocialLogin></SocialLogin>
+                <h1 className='login-title fw-bold text-center mt-3'>Please Register</h1>
+                <SocialLogin></SocialLogin>
 
                 <Form.Group className="mb-3">
 

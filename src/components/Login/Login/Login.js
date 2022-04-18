@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 
 const Login = () => {
@@ -66,11 +67,11 @@ const Login = () => {
   return (
     <div className='login w-100 mb-5'>
 
-      <h1 className='login-title fw-bold text-center mt-3'>Please Log In</h1>
 
 
       <Form id='form' onSubmit={handleFormSubmit} className='w-50 mx-auto mt-5 border p-4 rounded'>
-
+        <h1 className='login-title fw-bold text-center mt-3'>Please Log In</h1>
+        <SocialLogin></SocialLogin>
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
 

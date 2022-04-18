@@ -16,7 +16,7 @@ const SocialLogin = () => {
     }
 
     if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        errorElement = <p className='text-danger text-center'>Error: {error?.message}</p>
     }
 
     if (user) {
@@ -25,6 +25,7 @@ const SocialLogin = () => {
     return (
         <div>         
         <Button onClick={() => signInWithGoogle()} className='google-login-btn btn-success text-center d-flex justify-content-center align-items-center'><span><img src={googleIcon} alt="" /></span><span>Continue With Google</span></Button>
+        <p>{errorElement}</p>
         <div className='d-flex align-items-center justify-content-center mt-3 gap-3'><div className="divider w-25"></div> <h4 className='divider-text'>OR</h4> <div className="divider w-25"></div>  </div>
         </div>
     );

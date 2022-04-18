@@ -1,4 +1,4 @@
-import { ArrowRightIcon, QuestionMarkCircleIcon } from '@heroicons/react/solid';
+import {QuestionMarkCircleIcon } from '@heroicons/react/solid';
 import React from 'react';
 import './Blogs.css'
 

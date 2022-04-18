@@ -33,13 +33,13 @@ const Footer = () => {
 
 
           <ul style={{marginLeft: "1.70em"}}>
-            <li className="mb-3  list-unstyled">
+            <li className="mb-3 text-start  list-unstyled">
               <span><HomeIcon style={{width:"30px"}}></HomeIcon></span><span className="ms-2">Sector-03, Uttara, Dhaka-1230.</span>
             </li>
-            <li className="mb-3 list-unstyled">
+            <li className="mb-3 text-start list-unstyled">
               <span ><InboxIcon style={{width:"30px"}}></InboxIcon></span><span className="ms-2">mazdul1000@lotus.com</span>
             </li>
-            <li className="mb-3 list-unstyled">
+            <li className="mb-3 text-start list-unstyled">
               <span ><PhoneIcon style={{width:"30px"}}></PhoneIcon></span><span className="ms-2">+ 48 234 567 88</span>
             </li>
           </ul>

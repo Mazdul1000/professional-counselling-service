@@ -3,6 +3,13 @@
   
   margin-top: 100px;
 }
+
+.banner{
+  height: 505px;
+}
+.banner img{
+  height: 100%;
+}
 .carousel-item{
  border-radius: 10px;
   background-color: #064C37;
@@ -29,6 +36,7 @@
   color: #fff;
 }
 
+
 .carousel-indicators li { 
   display: none;
  }
@@ -42,6 +50,11 @@
      font-size: 17px;
    }
  }
+ @media screen and (max-width:768px){
+  .banner{
+    height: 300px;
+  }
+}
  @media screen and (max-width:544px) {
    .banner-info h2{
      font-size: 17px;

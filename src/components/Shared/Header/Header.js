@@ -4,7 +4,8 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import CustomLink from '../CustomLink/CustomLink';
-import './Header.css'
+import './Header.css';
+import logo from '../../../images/icons/logo.png';
 
 
 const Header = () => {
@@ -19,7 +20,7 @@ const Header = () => {
     return (
         <Navbar id='nav-bar' collapseOnSelect expand="lg" sticky="top">
   <Container>
-  <Navbar.Brand id='brand-name' role={"button"} onClick={() => {navigate('/home')}}>Lotus</Navbar.Brand>
+  <Navbar.Brand id='brand-name' className='d-flex align-items-center' role={"button"} onClick={() => {navigate('/home')}}> <img src={logo}  width={50} alt="logo"/><span className='ms-3'>Lotus</span> </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="ms-auto navigation">

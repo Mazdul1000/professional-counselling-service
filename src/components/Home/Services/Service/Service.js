@@ -14,7 +14,7 @@ const Service = ({service}) => {
         <div className='service-container mx-auto w-75 mt-5'>
             <Card className="service mx-auto bg-dark text-white">
   <Card.Img className='card-img w-100' src={img} alt="Card image" />
-  <Card.ImgOverlay className='img-overlay d-flex flex-column justify-content-center align-items-center'>
+  <Card.ImgOverlay className=' img-overlay d-flex flex-column justify-content-center align-items-center'>
     <Card.Title className='service-title'>{name}</Card.Title>
     <Card.Text className='service-info px-4'>
         {description}
