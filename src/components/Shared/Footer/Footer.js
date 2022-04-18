@@ -25,28 +25,19 @@ const Footer = () => {
           </p>
           <p>Msc in Psychology, University of Texas</p>
 
-          <div className="mt-4">
-            <a type="button" className="btn btn-floating btn-light btn-lg"> </a>
-            
-            <a type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-dribbble"></i></a>
-            
-            <a type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-twitter"></i></a>
-            
-            <a type="button" className="btn btn-floating btn-light btn-lg"><i className="fab fa-google-plus-g"></i></a>
-            
-          </div>
+        
         </div>
         
         <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
           <h5 className="text-uppercase mb-4 pb-1 text-center">Contact</h5>
 
 
-          <ul className="fa-ul" style={{marginLeft: "1.70em"}}>
+          <ul style={{marginLeft: "1.70em"}}>
             <li className="mb-3  list-unstyled">
-              <span><HomeIcon style={{width:"30px"}}></HomeIcon></span><span className="ms-2">Warsaw, 00-967, Poland</span>
+              <span><HomeIcon style={{width:"30px"}}></HomeIcon></span><span className="ms-2">Sector-03, Uttara, Dhaka-1230.</span>
             </li>
             <li className="mb-3 list-unstyled">
-              <span ><InboxIcon style={{width:"30px"}}></InboxIcon></span><span className="ms-2">contact@example.com</span>
+              <span ><InboxIcon style={{width:"30px"}}></InboxIcon></span><span className="ms-2">mazdul1000@lotus.com</span>
             </li>
             <li className="mb-3 list-unstyled">
               <span ><PhoneIcon style={{width:"30px"}}></PhoneIcon></span><span className="ms-2">+ 48 234 567 88</span>
@@ -82,7 +73,7 @@ const Footer = () => {
 
     
     <div className="text-center p-3" style={{backgroundColor: "rgba(0, 0, 0, 0.2)"}}>
-      © 2020 Copyright:
+      © 2022 Copyright:
     </div>
    
   </footer>

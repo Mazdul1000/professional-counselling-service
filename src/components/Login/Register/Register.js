@@ -4,8 +4,9 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
-import googleIcon from '../../../images/icons/google.svg';
-import './Register.css'
+import SocialLogin from '../SocialLogin/SocialLogin';
+import './Register.css';
+
 
 const Register = () => {
     const navigate = useNavigate();
@@ -16,14 +17,13 @@ const Register = () => {
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
     const [updateProfile, updating, UpdateError] = useUpdateProfile(auth);
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
     let errorElement;
-    if (error||UpdateError||googleError) {
-        errorElement = <p className='text-danger'>Error: {error?.message} {UpdateError?.message} {googleError?.message} </p>
+    if (error||UpdateError) {
+        errorElement = <p className='text-danger'>Error: {error?.message} {UpdateError?.message} </p>
     }
 
-    if (loading || updating||googleLoading) {
+    if (loading || updating) {
         return <h1>Loading</h1>
     }
 
@@ -31,7 +31,7 @@ const Register = () => {
         navigate('/login');
     }
   
-    if(user||googleUser){
+    if(user){
         navigate('/home');
     }
 
@@ -56,11 +56,9 @@ const Register = () => {
 
         <div className='w-100'>
                <h1 className='login-title fw-bold text-center mt-3'>Please Register</h1>
-                <Button onClick={() => signInWithGoogle()} className='google-login-btn btn-success text-center d-flex justify-content-center align-items-center'><span><img src={googleIcon} alt="" /></span><span>Continue With Google</span></Button>
-                <div className='d-flex align-items-center justify-content-center mt-3 gap-3'><div className="divider w-25"></div> <h4 className='divider-text'>OR</h4> <div className="divider w-25"></div> 
-                 </div>
+                
             <Form onSubmit={handleFormSubmit} id='form' className=' w-50 mx-auto mt-5 border p-4 rounded'>
-             
+             <SocialLogin></SocialLogin>
 
                 <Form.Group className="mb-3">
 
