@@ -5,12 +5,12 @@ import{getAuth}  from "firebase/auth"
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBjblfnG_sRSyA_Mc4x1nA4VZJszB_4ia4",
-    authDomain: "professional-counselling-app.firebaseapp.com",
-    projectId: "professional-counselling-app",
-    storageBucket: "professional-counselling-app.appspot.com",
-    messagingSenderId: "141095508446",
-    appId: "1:141095508446:web:d64e7eb6745901c5e1654f"
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID
   };
 
 

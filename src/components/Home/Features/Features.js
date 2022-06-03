@@ -40,7 +40,7 @@ const Features = () => {
                 {/* Right side features */}
                 <div className="right-features  col-md-12 col-lg-6">
                     <div className="w-100 d-flex flex-column justify-content-center align-items-center right-title my-3 mb-5">
-                        <h3>Star with a basic Assesment</h3>
+                        <h3>Start with a basic assesment</h3>
                         <Button className='feature-btn btn-success mt-3'>Get Started</Button>
                         </div>
 
