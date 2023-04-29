@@ -6,9 +6,9 @@ import './About.css';
 const About = () => {
     return (
         <div className='w-100 about-container my-5'>
-            <h1 className='about-title mb-5'>About Me</h1>
+            <h1 className='about-title mb-5'>About Us</h1>
 
-  <Card className='about-card w-50 mx-auto p-3'>
+  {/* <Card className='about-card w-50 mx-auto p-3'>
     <Card.Img className='w-50 mx-auto' variant="top" src={myImg} />
     <Card.Body>
       <Card.Text>
@@ -19,7 +19,9 @@ const About = () => {
        
       </Card.Text>
       </Card.Body>
-  </Card>
+  </Card> */}
+  
+  <h3>Under construction</h3>
 
 
         </div>
